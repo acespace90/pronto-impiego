@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+    <title>Pronto Impiego</title>
+    <meta name="description" content="Pronto Impiego">
+
+    <link rel="stylesheet" href="../css/main.css" />
+
+  </head>
+  <body>
+    
+    {% block header %}
+    {% endblock %}
+
+    <main class="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    {% block footer %}
+    {% endblock %}
+
+
+    <script src="../js/footer.min.js"></script>
+
+    {% block javascript %}
+    {% endblock %}
+
+  </body>
+</html>

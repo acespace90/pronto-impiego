@@ -1,0 +1,5 @@
+html {
+  background-color: $body-color;
+  color: $color-text;
+  @include font-scale(base);
+}

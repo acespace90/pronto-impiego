@@ -1,0 +1,28 @@
+{
+  "name": "prontoimpiego",
+  "description": "prontoimpiego website",
+  "main": "index.js",
+  "authors": [
+    "Gnv"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "leanux",
+    "website"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "https://github.com/acespace90/prontoimpiego.git",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-sites": "^6.2.2",
+    "swiper": "~3.4.2"
+  }
+}

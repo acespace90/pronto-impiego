@@ -1,0 +1,52 @@
+{% extends "layouts/layout.html"%}
+
+{% block header %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block content %}
+
+	<div class="page_landing">
+		
+		<section class="page_landing__hero">
+			{% include "blocks/hero.html" %}
+		</section>
+		
+		<section class="page_landing__testimonials">
+		</section>
+
+		<section class="page_landing__steps">
+		</section>
+
+	</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+	$(document).ready(function () {
+
+    var mySwiper = new Swiper ('.swiper-container', {
+      pagination: '.swiper-pagination',
+      paginationClickable: true,
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      slidesPerView: 3,
+      spaceBetween: 15,
+      breakpoints: {
+		    768: {
+		      slidesPerView: 2,
+		      spaceBetween: 30,
+		    },
+		    640: {
+		      slidesPerView: 1,
+		      spaceBetween: 30
+		    }
+		  }
+    })
+
+  });
+</script>
+{% endblock %}

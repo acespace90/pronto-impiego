@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+// SETTINGS
+@import "01-settings/settings.global";
+@import "01-settings/settings.colors";
+@import "01-settings/settings.typo";
+@import "01-settings/settings.buttons";
+@import "01-settings/settings.foundation";
+@import "01-settings/settings.breakpoints";
+@import "01-settings/settings.grid";
+
+// TOOLS
+@import "02-tools/tools.colors";
+@import "02-tools/tools.typo";
+@import "02-tools/tools.buttons";
+@import "02-tools/tools.mixins";
+
+// GENERIC
+@import "03-generic/generic.normalize";
+@import "03-generic/generic.box-sizing";
+@import "03-generic/generic.reset";
+
+// BASE
+@import "04-base/base.page";
+@import "04-base/base.headings";
+@import "04-base/base.links";
+@import "04-base/base.lists";
+@import "04-base/base.images";
+@import "04-base/base.forms";
+
+// OBJECTS
+@import "05-objects/*.*.scss";
+
+// PAGES
+@import "06-pages/*.*.scss";
+
+// COMPONENTS
+@import "07-components/*.*.scss";
+
+// VENDOR
+@import "08-vendor/swiper";
+
+// TRUMPS
+@import "09-trumps/trumps.swiper";
