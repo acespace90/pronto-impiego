@@ -1,0 +1,10 @@
+{% macro step(step_text, step_image) %}
+<div class="c-step">
+	<div class="c-step__image">
+		<img src="{{ step_image|safe }}" class="svg" alt="">
+	</div>
+	<div class="c-step__text">
+		{{ step_text|safe }}
+	</div>
+</div>
+{% endmacro %}

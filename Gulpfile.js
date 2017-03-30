@@ -35,7 +35,7 @@ gulp.task('nunjucks', function() {
       path: ['src/views/']
     }))
   // output files in app folder
-  .pipe(gulp.dest('build/html'))
+  .pipe(gulp.dest('build'))
 });
 
 /* -------------- Sass/Css -------------- */
@@ -113,7 +113,9 @@ gulp.task('headjs', function() {
 gulp.task('footerjs', function() {
   gulp.src([
     bwpath + 'jquery/dist/jquery.min.js',
-    bwpath + 'swiper/dist/js/swiper.jquery.min.js'
+    bwpath + 'swiper/dist/js/swiper.jquery.min.js',
+    bwpath + 'inline-svg/dist/inlineSVG.min.js',
+    'src/js/inline-svg.js'
   ])
   .pipe(sourcemaps.init({loadMaps: true}))
   .pipe(concat('footer.min.js'))
@@ -135,7 +137,7 @@ gulp.task('watch', function () {
   gulp.watch('src/sass/**/**/*.scss', ['sass']);
   gulp.watch('src/js/blocks/**/*.js', ['scripts']);
   gulp.watch('src/js/vendor/**/*.js', ['scripts']);
-  gulp.watch('build/html/**/*.html', browserSync.reload);
+  gulp.watch('build/**/*.html', browserSync.reload);
 
   // Handling the Delete Event on Watch
     var watcher = gulp.watch('src/images/**', ['imagemin']);

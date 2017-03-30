@@ -1,0 +1,50 @@
+<div class="c-steps">
+	
+	<div class="row">
+		<div class="c-steps__title column">
+			<h3>
+			Trovare lavoro<br> <strong>non è mai stato così semplice</strong>
+			</h3>
+		</div>
+	</div>
+
+	<div class="c-steps__items row">
+		<div class="c-steps__item column">
+			{% import "blocks/step.html" as step_item %}
+			{{ step_item.step
+				(
+					'<strong>Il tuo portale del lavoro</strong> sempre con te.',
+					'images/svgs/responsive.svg'
+				) 
+			}}
+		</div>
+		<div class="c-steps__item column">
+			{% import "blocks/step.html" as step_item %}
+			{{ step_item.step
+				(
+					'Completa <strong>in pochi click</strong> il tuo curriculum online.',
+					'images/svgs/list.svg'
+				) 
+			}}
+		</div>
+		<div class="c-steps__item column">
+			{% import "blocks/step.html" as step_item %}
+			{{ step_item.step
+				(
+					'<strong>Seleziona le aziende</strong> più attinenti al tuo profilo.',
+					'images/svgs/placeholder.svg'
+				) 
+			}}
+		</div>
+		<div class="c-steps__item column">
+			{% import "blocks/step.html" as step_item %}
+			{{ step_item.step
+				(
+					'<strong>Invia subito la tua candidatura</strong> alle aziende scelte.',
+					'images/svgs/handshake.svg'
+				) 
+			}}
+		</div>
+	</div>
+
+</div>
