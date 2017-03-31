@@ -23,12 +23,32 @@
 			{% include 'blocks/steps.html' %}
 		</section>
 
+		<section class="page_landing__professions">
+			{% include 'blocks/professions.html' %}
+		</section>
+
 	</div>
 
 {% endblock %}
 
 {% block javascript %}
 <script>
+
+	$('.js-showMoreProf').click(function(){
+		$('.c-professions__more').hide();
+		$('.c-professions__list--secondary').toggle();
+		$('.c-professions__more').appendTo('.c-professions');
+		if( $('.c-professions__list--secondary').is(":visible") ){
+			$('html,body').animate({
+	      scrollTop: $('.c-professions__list--secondary').offset().top
+	    }, 700);
+		} else {
+			$('html,body').animate({
+	      scrollTop: $('.page_landing__professions').offset().top
+	    }, 700);
+		}
+	});
+
 	$(document).ready(function () {
 
     var mySwiper = new Swiper ('.swiper-container', {
@@ -48,7 +68,7 @@
 		      spaceBetween: 30
 		    }
 		  }
-    })
+    });
 
   });
 </script>

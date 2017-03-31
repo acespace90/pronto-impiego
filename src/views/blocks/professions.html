@@ -1,0 +1,43 @@
+<div class="c-professions">
+
+	<div class="row">
+		<div class="c-professions__title column">
+			Scegli la tua professione<br>
+			e <strong>presentati alle aziende oggi stesso</strong>
+		</div>
+	</div>
+
+	<div class="c-professions__list c-professions__list--primary row">
+		{% for i in range(1, 9) %}
+			<div class="c-professions__item column">
+				{% import "blocks/profession.html" as profession %}
+				{{ profession.profession('images/cuoco.jpg', 'Cuoco') }}
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="c-professions__more row">
+		<div class="column">
+			<a class="button button--primary js-showMoreProf">Scopri tutte le professioni</a>
+		</div>
+	</div>
+
+	<div class="c-professions__list c-professions__list--secondary row">
+		{% for i in range(1, 9) %}
+			<div class="c-professions__item column">
+				{% import "blocks/profession.html" as profession %}
+				{{ profession.profession('images/cuoco.jpg', 'Cuoco') }}
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="c-professions__sendmail row">
+		<div class="column">
+			<p>
+				Non hai trovato la tua professione? Scrivici a 
+				<a href="mailto:info@prontoimpiego.it"><strong>info@prontoimpiego.it</strong></a>
+			</p>
+		</div>
+	</div>
+
+</div>

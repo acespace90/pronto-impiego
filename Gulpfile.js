@@ -155,7 +155,7 @@ gulp.task('watch', function () {
 
 gulp.task('browser-sync', function() {
   browserSync.init({
-    proxy: "localhost/pronto-impiego-nunj",
+    proxy: "localhost/pronto-impiego",
     open: false
   });
 });
