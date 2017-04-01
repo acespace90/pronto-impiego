@@ -2,9 +2,11 @@
 <div class="c-hero {{ modifier }}">
 	<div class="row">
 		
+		{% if modifier != 'c-hero--bottom' %}
 		<div class="c-hero__header column">
 			{% include 'blocks/header.html' %}
 		</div>
+		{% endif %}
 
 		<div class="c-hero__main column">
 			<h1>Voglio inviare il mio curriculum <strong>a migliaia di aziende.</strong></h1>

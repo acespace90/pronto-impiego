@@ -1,5 +1,5 @@
 .c-steps{
-
+	padding-bottom: 30px;
 }
 
 	.c-steps__title{
@@ -18,6 +18,10 @@
 		}
 	}
 
+	.c-steps__items{
+		margin-bottom: 15px;
+	}
+
 	.c-steps__item{
 		@include grid-column-size(3);
 		@include breakpoint(medium down) {
@@ -25,5 +29,17 @@
 		}
 		@include breakpoint(xsmall down) {
 			@include grid-column-size(12);
+		}
+	}
+
+	.c-steps__cta{
+		display: flex;
+		justify-content: flex-end;
+		@include breakpoint(medium down) {
+			justify-content: center;
+		}
+		a{
+			width: 100%;
+			max-width: 260px;
 		}
 	}

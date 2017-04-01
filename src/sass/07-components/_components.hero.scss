@@ -8,11 +8,17 @@
 
 }
 
-.c-hero--home{
+.c-hero--home,
+.c-hero--bottom{
+	background-color: color(secondary);
 	background-image: url('../images/img-home.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center bottom;
+}
+
+.c-hero--bottom{
+	min-height: 400px;
 }
 
 	.c-hero__header{

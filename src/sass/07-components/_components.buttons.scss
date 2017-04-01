@@ -40,4 +40,8 @@
     @include gnv-button-color( #fff, color(success) );
   }
 
+  &--white{
+    @include gnv-button-color-inverse( #fff, transparent );
+  }
+
 }

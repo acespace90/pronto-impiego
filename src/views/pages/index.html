@@ -4,6 +4,7 @@
 {% endblock %}
 
 {% block footer %}
+	{% include 'blocks/footer.html' %}
 {% endblock %}
 
 {% block content %}
@@ -25,6 +26,11 @@
 
 		<section class="page_landing__professions">
 			{% include 'blocks/professions.html' %}
+		</section>
+
+		<section class="page_landing__hero">
+			{% import "blocks/hero.html" as hero %}
+			{{ hero.hero('c-hero--bottom') }}
 		</section>
 
 	</div>

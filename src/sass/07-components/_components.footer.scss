@@ -1,0 +1,15 @@
+.c-footer{
+	text-align: center;
+	padding: 30px 0;
+	background-color: color(secondary);
+
+	p, a{
+		color: #fff;
+		@include font-scale(x-small);
+	}
+
+	a{
+		text-decoration: underline;
+	}
+
+}
