@@ -30,7 +30,7 @@
 			<div class="c-hero__header column">
 				<header class="c-header">
   <div class="c-header__logo">
-  	<a href="#">
+  	<a href="index.html">
   		<img src="images/svgs/logo.svg" alt="">
   	</a>
   </div>
@@ -521,7 +521,7 @@
 	$('.js-showMoreProf').click(function(){
 		$('.c-professions__more').hide();
 		$('.c-professions__list--secondary').toggle();
-		$('.c-professions__more').appendTo('.c-professions');
+		// $('.c-professions__more').appendTo('.c-professions');
 		if( $('.c-professions__list--secondary').is(":visible") ){
 			$('html,body').animate({
 	      scrollTop: $('.c-professions__list--secondary').offset().top
