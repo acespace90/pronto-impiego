@@ -2,19 +2,14 @@
 
 	min-height: 600px;
 	padding-top: 50px;
+	background-color: color(secondary);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center bottom;
 	@include breakpoint(medium down) {
 		padding-top: 25px;
 	}
 
-}
-
-.c-hero--home,
-.c-hero--bottom{
-	background-color: color(secondary);
-	background-image: url('../images/img-home.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center bottom;
 }
 
 .c-hero--bottom{

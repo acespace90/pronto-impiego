@@ -1,11 +1,11 @@
-{% macro hero(modifier, hero_title) %}
-<div class="c-hero {{ modifier }}">
+{% macro hero(modifier, hero_title, hero_image) %}
+<div class="c-hero {{ modifier }}" style="background-image: url(' {{hero_image}} ');">
 	<div class="row">
 		
 		{% if modifier != 'c-hero--bottom' %}
-		<div class="c-hero__header column">
-			{% include 'blocks/header.html' %}
-		</div>
+			<div class="c-hero__header column">
+				{% include 'blocks/header.html' %}
+			</div>
 		{% endif %}
 
 		<div class="c-hero__main column">
