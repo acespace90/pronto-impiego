@@ -15,8 +15,8 @@
 			{% import "blocks/hero.html" as hero %}
 			{{ hero.hero(
 				null, 
-				'Voglio inviare il mio curriculum <strong>a migliaia di aziende.</strong>',
-				'images/img-home.jpg'
+				'Voglio inviare il mio curriculum <strong>come Cuoco</strong> <span class="city-name">a Rimini.</span>',
+				'images/img-profession.jpg'
 			) }}
 		</section>
 		
@@ -30,15 +30,19 @@
 
 		<section class="page_landing__professions">
 			{% import 'blocks/professions.html' as professions %}
-			{{ professions.professions() }}
+			{{ professions.professions('c-professions--compact') }}
+		</section>
+
+		<section class="page_landing__cities">
+			{% include 'blocks/cities.html' %}
 		</section>
 
 		<section class="page_landing__hero">
 			{% import "blocks/hero.html" as hero %}
 			{{ hero.hero(
 				'c-hero--bottom', 
-				'Voglio inviare il mio curriculum <strong>a migliaia di aziende.</strong>',
-				'images/img-home.jpg'
+				'Invia in un click il tuo curriculum <strong>come Cuoco.</strong>',
+				'images/img-profession.jpg'
 			) }}
 		</section>
 
@@ -49,19 +53,13 @@
 {% block javascript %}
 <script>
 
-	$('.js-showMoreProf').click(function(){
-		$('.c-professions__more').hide();
-		$('.c-professions__list--secondary').toggle();
-		$('.c-professions__more').appendTo('.c-professions');
-		if( $('.c-professions__list--secondary').is(":visible") ){
-			$('html,body').animate({
-	      scrollTop: $('.c-professions__list--secondary').offset().top
-	    }, 700);
-		} else {
-			$('html,body').animate({
-	      scrollTop: $('.page_landing__professions').offset().top
-	    }, 700);
-		}
+	$('.js-showMoreCities').click(function(){
+		$('.c-cities__more').hide();
+		$('.c-cities__list--secondary').toggle();
+		// $('.c-cities__more').appendTo('.c-cities');
+		$('html,body').animate({
+      scrollTop: $('.c-cities__list--secondary').offset().top
+    }, 700);
 	});
 
 	$(document).ready(function () {

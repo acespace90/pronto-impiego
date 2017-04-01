@@ -8,6 +8,9 @@
 		@include breakpoint(medium down) {
 			display: none;
 		}
+		.c-professions--compact & {
+			display: none;
+		}
 	}
 
 	.c-professions__title{
@@ -45,6 +48,9 @@
 		@include breakpoint(medium down) {
 			display: block;
 		}
+		.c-professions--compact & {
+			display: block;
+		}
 	}
 	
 	.c-professions__sendmail p,
@@ -54,4 +60,9 @@
 
 	.c-professions__sendmail{
 		text-align: center;
+		.c-professions--compact & {
+			display: none;
+		}
 	}
+
+.c-professions--compact{}

@@ -3,7 +3,6 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   @include font-scale(base);
-  font-weight: fw(bold);
   text-align: center;
   text-decoration: none;
   @include gnv-button-color(#fff, #ccc);

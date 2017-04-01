@@ -1403,7 +1403,8 @@ img {
 .o-underlined-link {
   text-decoration: underline; }
 
-.page_landing__professions {
+.page_landing__professions,
+.page_landing__cities {
   background-color: #39649A; }
 
 .button {
@@ -1414,7 +1415,6 @@ img {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5em;
-  font-weight: 700;
   text-align: center;
   text-decoration: none;
   color: #fff;
@@ -1464,6 +1464,33 @@ img {
       color: #39649A;
       text-decoration: none; }
 
+.c-cities {
+  padding-bottom: 60px; }
+
+.c-cities__list--secondary {
+  display: none;
+  margin-bottom: 30px; }
+
+.c-cities__city {
+  width: 25%;
+  margin-bottom: 15px; }
+  @media screen and (max-width: 48em) {
+    .c-cities__city {
+      width: 50%; } }
+
+.c-cities__list a {
+  color: #fff;
+  font-family:  "Asap", sans-serif ;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857em; }
+
+.c-cities__more {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px; }
+
 .c-footer {
   text-align: center;
   padding: 30px 0;
@@ -1491,6 +1518,8 @@ img {
   @media screen and (max-width: 48em) {
     .c-header__companies {
       display: none; } }
+  .c-header__companies a:hover {
+    text-decoration: underline; }
 
 .c-header__companies--mobile {
   display: none;
@@ -1570,6 +1599,8 @@ h1 {
   @media screen and (max-width: 40em) {
     h1 {
       font-size: 28px; } }
+  h1 .city-name {
+    color: #63a1ef; }
 
 h2 {
   font-weight: 400;
@@ -1638,6 +1669,8 @@ h2 {
   @media screen and (max-width: 48em) {
     .c-professions__list--secondary {
       display: none; } }
+  .c-professions--compact .c-professions__list--secondary {
+    display: none; }
 
 .c-professions__title {
   color: #fff;
@@ -1680,6 +1713,8 @@ h2 {
   @media screen and (max-width: 48em) {
     .c-professions__more {
       display: block; } }
+  .c-professions--compact .c-professions__more {
+    display: block; }
 
 .c-professions__sendmail p,
 .c-professions__sendmail a {
@@ -1687,6 +1722,8 @@ h2 {
 
 .c-professions__sendmail {
   text-align: center; }
+  .c-professions--compact .c-professions__sendmail {
+    display: none; }
 
 @media screen and (max-width: 48em) {
   .c-step {
