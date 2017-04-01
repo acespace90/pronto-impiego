@@ -13,7 +13,10 @@
 		
 		<section class="page_landing__hero">
 			{% import "blocks/hero.html" as hero %}
-			{{ hero.hero('c-hero--home') }}
+			{{ hero.hero(
+				'c-hero--home', 
+				'Voglio inviare il mio curriculum <strong>a migliaia di aziende.</strong>'
+			) }}
 		</section>
 		
 		<section class="page_landing__testimonials">
@@ -30,7 +33,10 @@
 
 		<section class="page_landing__hero">
 			{% import "blocks/hero.html" as hero %}
-			{{ hero.hero('c-hero--bottom') }}
+			{{ hero.hero(
+				'c-hero--bottom', 
+				'Voglio inviare il mio curriculum <strong>a migliaia di aziende.</strong>'
+			) }}
 		</section>
 
 	</div>
