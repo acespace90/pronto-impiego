@@ -1,0 +1,33 @@
+{% macro progressbar(item1_class, item2_class, item3_class) %}
+<div class="c-progressbar {{ progressbar_modifier }}">
+	
+	<div class="c-progressbar__item {{ item1_class }}">
+		<div class="icon">
+			<img src="images/svgs/list.svg" alt="" class="svg" width="40">
+		</div>
+		<div class="text">
+			Indicaci le tue <strong>competenze</strong> e le tue <strong>esperienze</strong>
+		</div>
+	</div>
+
+	<div class="c-progressbar__item {{ item2_class }}">
+		<div class="icon">
+			<img src="images/svgs/user.svg" alt="" class="svg" width="40">
+		</div>
+		<div class="text">
+			Scrivi i tuoi contatti e <strong>dati anagrafici</strong>
+		</div>
+	</div>
+
+	<div class="c-progressbar__item {{ item3_class }}">
+		<div class="icon">
+			<img src="images/svgs/placeholder.svg" alt="" class="svg" width="40">
+		</div>
+		<div class="text">
+			Scegli le <strong>aziende da contattare</strong>
+		</div>
+	</div>
+
+</div>
+
+{% endmacro %}

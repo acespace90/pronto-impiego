@@ -1,0 +1,66 @@
+.c-progressbar{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+	.c-progressbar__item{
+		position: relative;
+		z-index: 1;
+		padding: 0 20px;
+		.icon{
+			text-align: center;
+			margin-bottom: 5px;
+		}
+		.text{
+			text-align: center;
+			@include font-scale(x-small);
+			color: color(secondary);
+		}
+		svg{
+			width: 40px;
+			* {
+				fill: color(secondary);
+			}
+		}
+		&:before{
+			content: '';
+			position: absolute;
+	    width: 40%;
+	    height: 2px;
+	    border-top: 2px dashed #ccc;
+	    right: -17%;
+	    top: 25%;
+		}
+		&:last-child:before{
+			display: none;
+		}
+	}
+
+	.c-progressbar__item--disabled{
+		.text{
+			color: #ccc;
+		}
+		svg * {
+			fill: #ccc;
+		}
+	}
+
+	.c-progressbar__item--active{
+		.text{
+			color: color(secondary);
+		}
+		svg * {
+			fill: color(secondary);
+		}
+	}
+
+	.c-progressbar__item--success{
+		.text{
+			color: color(success);
+		}
+		svg * {
+			fill: color(success);
+		}
+	}

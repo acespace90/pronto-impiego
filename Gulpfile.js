@@ -57,7 +57,8 @@ gulp.task('sass', function () {
 
 gulp.task('copy-bower-css', function () {
   gulp.src([
-    bwpath + 'swiper/dist/css/swiper.min.css'
+    bwpath + 'swiper/dist/css/swiper.min.css',
+    bwpath + 'select2/dist/css/select2.min.css'
   ])
     .pipe(rename({
       prefix: "_",
@@ -115,6 +116,7 @@ gulp.task('footerjs', function() {
     bwpath + 'jquery/dist/jquery.min.js',
     bwpath + 'swiper/dist/js/swiper.jquery.min.js',
     bwpath + 'inline-svg/dist/inlineSVG.min.js',
+    bwpath + 'select2/dist/js/select2.min.js',
     'src/js/inline-svg.js'
   ])
   .pipe(sourcemaps.init({loadMaps: true}))

@@ -1,0 +1,41 @@
+.o-form{
+
+	label{
+		text-transform: uppercase;
+		display: block;
+		width: 100%;
+		color: gray(dark);
+		@include font-scale(x-small);
+		font-weight: fw(bold);
+		margin-bottom: 8px;
+	}
+
+	input{
+		border: 1px solid #ccc;
+		width: 100%;
+		display: block;
+		@include border-radius(3px);
+		padding: 8px;
+		@include font-scale(small);
+		color: gray(dark);
+		transition: all .3s ease;
+		&:focus{
+			outline: 0;
+			border: 1px solid color(primary);
+		}
+	}
+
+	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: #ccc;
+	}
+	input::-moz-placeholder { /* Firefox 19+ */
+	  color: #ccc;
+	}
+	input:-ms-input-placeholder { /* IE 10+ */
+	  color: #ccc;
+	}
+	input:-moz-placeholder { /* Firefox 18- */
+	  color: #ccc;
+	}
+
+}

@@ -18,6 +18,9 @@
 		svg{
 			width: 100%;
 			height: 90px;
+			*{
+				fill: color(secondary);
+			}
 			@include breakpoint(small down) {
 				width: 45px;
 			}

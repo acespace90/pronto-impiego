@@ -1,0 +1,77 @@
+{% extends "layouts/layout.html"%}
+
+{% block header %}
+<div class="row">
+	<div class="column">
+		<header class="c-header c-header--dark c-header--funnel">
+		  <div class="c-header__logo">
+		  	<a href="index.html">
+		  		<img src="images/svgs/logo.svg" alt="" class="svg">
+		  	</a>
+		  </div>
+		  <div class="c-header__companies">
+		  	Sei un' azienda e cerchi personale? <a href="#"><strong>Registrati GRATIS</strong></a>
+		  </div>
+		  <div class="c-header__companies--mobile">
+		  	<a href="#">Per le aziende</a>
+		  </div>
+		</header>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include 'blocks/footer.html' %}
+{% endblock %}
+
+{% block content %}
+	
+	<div class="page_funnel">
+
+		<div class="row">
+			<div class="page_funnel__progressbar column">
+				{% import 'blocks/progressbar.html' as progress %}
+				{{ progress.progressbar(
+					'c-progressbar__item--active',
+					'c-progressbar__item--disabled',
+					'c-progressbar__item--disabled'
+				) }}
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="column">
+				<div class="page_funnel__wrapper">
+					<div class="row">
+						<div class="page_funnel__wrapper__inner column">
+							<div class="title">La tua esperienza</div>
+							<div class="subtitle">Indicaci qual è la professione di tuo interesse e gli anni di esperienza che hai maturato in quella mansione</div>
+
+							<form action="" class="o-form">
+								
+								<label for="">Professione <sup>*</sup></label>
+								<select class="o-form__select2" style="width: 100%">
+								  {% for i in range(1, 25) %}
+										<option value="option-{{i}}">Professione {{i}}</option>
+								  {% endfor %}
+								</select>
+
+							</form>
+
+						</div>						
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+	$(document).ready(function() {
+	  $(".o-form__select2").select2();
+	});
+</script>
+{% endblock %}

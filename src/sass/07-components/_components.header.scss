@@ -17,6 +17,9 @@
 		a:hover{
 			text-decoration: underline;
 		}
+		.c-header--dark &{
+			color: color(secondary);
+		}
 	}
 
 	.c-header__companies--mobile{
@@ -28,4 +31,20 @@
 		a{
 			text-decoration: underline;
 		}
+	}
+
+	.c-header--dark a{
+		color: color(secondary);
+	}
+
+	.c-header--dark svg{
+		width: 189px;
+		*{
+			fill: color(secondary);
+		}
+	}
+
+	.c-header--funnel{
+		margin-top: 50px;
+		margin-bottom: 70px;
 	}

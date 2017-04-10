@@ -1,0 +1,48 @@
+.page_funnel{
+
+}
+
+	.page_funnel__progressbar{
+		margin-bottom: 40px;
+		@include breakpoint(medium up) {
+			@include grid-column-size(8);
+			@include grid-column-offset(2);
+			@include grid-column-end();
+		}
+		@include breakpoint(large up) {
+			@include grid-column-size(6);
+			@include grid-column-offset(3);
+		}
+	}
+
+	.page_funnel__wrapper{
+		background-color: #fff;
+		@include border-radius(10px);
+		padding: 50px 0;
+		.row{
+			margin-right: auto;
+			margin-left: auto;
+		}
+		.title{
+			color: color(primary);
+			font-weight: fw(bold);
+			@include font-scale(large);
+		}
+		.subtitle{
+			@include font-scale(small);	
+			color: gray(dark);
+			margin-bottom: 40px;
+		}
+	}
+
+		.page_funnel__wrapper__inner{
+			@include breakpoint(medium up) {
+				@include grid-column-size(8);
+				@include grid-column-offset(2);
+				@include grid-column-end();
+			}
+			@include breakpoint(large up) {
+				@include grid-column-size(6);
+				@include grid-column-offset(3);
+			}
+		}
