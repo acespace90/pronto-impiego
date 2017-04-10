@@ -1395,6 +1395,9 @@ img {
 .o-bottom-spacing-big {
   margin-bottom: 60px; }
 
+.o-bottom-spacing-huge {
+  margin-bottom: 120px; }
+
 .o-form label {
   text-transform: uppercase;
   display: block;
@@ -1421,7 +1424,8 @@ img {
   font-size: 0.875rem;
   line-height: 1.42857em;
   color: #565B61;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  margin-bottom: 24px; }
   .o-form input:focus {
     outline: 0;
     border: 1px solid #39649A; }
@@ -1441,6 +1445,15 @@ img {
 .o-form input:-moz-placeholder {
   /* Firefox 18- */
   color: #ccc; }
+
+.o-form__item {
+  margin-bottom: 24px; }
+
+.o-form__item--success label {
+  color: #36BD77; }
+
+.o-form__item--error label {
+  color: #C14F4F; }
 
 .o-neutral-link {
   color: inherit; }
@@ -3076,6 +3089,8 @@ button.swiper-pagination-bullet {
 .select2-container .select2-selection {
   height: auto;
   border: 1px solid #ccc; }
+  .o-form__item--error .select2-container .select2-selection {
+    border: 1px solid #C14F4F; }
 
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
 .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {

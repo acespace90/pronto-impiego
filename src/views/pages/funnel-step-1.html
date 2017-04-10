@@ -44,17 +44,32 @@
 				<div class="page_funnel__wrapper">
 					<div class="row">
 						<div class="page_funnel__wrapper__inner column">
-							<div class="title">La tua esperienza</div>
-							<div class="subtitle">Indicaci qual è la professione di tuo interesse e gli anni di esperienza che hai maturato in quella mansione</div>
 
 							<form action="" class="o-form">
 								
-								<label for="">Professione <sup>*</sup></label>
-								<select class="o-form__select2" style="width: 100%">
-								  {% for i in range(1, 25) %}
-										<option value="option-{{i}}">Professione {{i}}</option>
-								  {% endfor %}
-								</select>
+								<div class="title">La tua esperienza</div>
+								<div class="subtitle">Indicaci qual è la professione di tuo interesse e gli anni di esperienza che hai maturato in quella mansione</div>
+
+								<div class="o-form__item o-form__item--success">
+									<label for="">Professione <sup>*</sup></label>
+									<select class="o-form__select2" style="width: 100%">
+									  {% for i in range(1, 25) %}
+											<option value="option-{{i}}">Professione {{i}}</option>
+									  {% endfor %}
+									</select>
+								</div>
+
+								<div class="o-form__item o-form__item--error">
+									<label for="">Anni di esperienza <sup>*</sup></label>
+									<select class="o-form__select2" style="width: 100%">
+									  {% for i in range(1, 10) %}
+											<option value="option-{{i}}">{{i}} anni</option>
+									  {% endfor %}
+									</select>
+								</div>
+
+								<div class="title">Istruzione e competenze</div>
+								<div class="subtitle">Indicaci qual è il tuo livello di istruzione e quali tipi di conoscenze hai acquisito negli anni.</div>
 
 							</form>
 
