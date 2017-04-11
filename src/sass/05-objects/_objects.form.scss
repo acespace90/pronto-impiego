@@ -52,8 +52,22 @@
 		padding-bottom: 30px;
 	}
 
+	.o-form__row{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
 	.o-form__item{
 		margin-bottom: 24px;
+		.o-form__row &{
+			width: 100%;
+			display: inline-block;
+			margin-bottom: 0;
+			@include breakpoint(large up) {
+				width: 48%;
+			}
+		}
 	}
 
 		.o-form__item--success{

@@ -1455,8 +1455,20 @@ img {
   border-bottom: 1px dashed #ccc;
   padding-bottom: 30px; }
 
+.o-form__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
 .o-form__item {
   margin-bottom: 24px; }
+  .o-form__row .o-form__item {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0; }
+    @media screen and (min-width: 48.0625em) {
+      .o-form__row .o-form__item {
+        width: 48%; } }
 
 .o-form__item--success label {
   color: #36BD77; }

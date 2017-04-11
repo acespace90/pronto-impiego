@@ -51,67 +51,72 @@
 									<div class="title">I tuoi dati anagrafici</div>
 									<div class="subtitle">Indicandoci le informazioni sulla tua persona ci aiuterai a completare il tuo curriculum dando così informazioni utili alle aziende che sceglierai</div>
 									
-									<div class="o-form__item o-form__item--success">
-										<label for="">Professione <sup>*</sup></label>
+									<div class="o-form__row">
+										<div class="o-form__item">
+											<label for="">Nome <sup>*</sup></label>
+											<input type="text" placeholder="Es. Mario">
+										</div>
+										<div class="o-form__item">
+											<label for="">Cognome <sup>*</sup></label>
+											<input type="text" placeholder="Es. Rossi">
+										</div>
+									</div>
+
+									<div class="o-form__item">
+										<label for="">Luogo di nascita <sup>*</sup></label>
+										<input type="text" placeholder="Es. Milano">
+									</div>
+
+									<div class="o-form__row">
+										<div class="o-form__item">
+											<label for="">Data di nascita <sup>*</sup></label>
+											<input type="text" placeholder="GG/MM/AAAA">
+										</div>
+										<div class="o-form__item">
+											<label for="">Sesso <sup>*</sup></label>
+											<select class="o-form__select2" style="width: 100%">
+												<option value="Male">Uomo</option>
+												<option value="Female">Donna</option>
+											</select>
+										</div>
+									</div>
+
+									<div class="o-form__item">
+										<label for="">Comune di residenza <sup>*</sup></label>
 										<select class="o-form__select2" style="width: 100%">
-										  {% for i in range(1, 25) %}
-												<option value="option-{{i}}">Professione {{i}}</option>
+										  {% for i in range(1, 10) %}
+												<option value="option-{{i}}">Option {{i}}</option>
+										  {% endfor %}
+										</select>
+									</div>
+
+									<div class="o-form__item">
+										<label for="">Provincia di residenza <sup>*</sup></label>
+										<select class="o-form__select2" style="width: 100%">
+										  {% for i in range(1, 10) %}
+												<option value="option-{{i}}">Option {{i}}</option>
 										  {% endfor %}
 										</select>
 									</div>
 									
-									<div class="o-form__item o-form__item--error">
-										<label for="">Anni di esperienza <sup>*</sup></label>
-										<select class="o-form__select2" style="width: 100%">
-										  {% for i in range(1, 10) %}
-												<option value="option-{{i}}">{{i}} anni</option>
-										  {% endfor %}
-										</select>
+									<div class="o-form__item">
+										<label for="">Indirizzo <sup>*</sup></label>
+										<input type="text" placeholder="Es. Via Roma">
 									</div>
+
 								</div>
 
-								<div class="title">Istruzione e competenze</div>
-								<div class="subtitle">Indicaci qual è il tuo livello di istruzione e quali tipi di conoscenze hai acquisito negli anni.</div>
+								<div class="title">I tuoi contatti</div>
+								<div class="subtitle">I tuoi contatti verranno inviati alle aziende di tuo interesse per poter essere ricontattato e per fissare un colloquio conoscitivo.</div>
 
 								<div class="o-form__item">
-									<label for="">Livello istruzione <sup>*</sup></label>
-									<select class="o-form__select2" style="width: 100%">
-									  {% for i in range(1, 10) %}
-											<option value="option-{{i}}">Option {{i}}</option>
-									  {% endfor %}
-									</select>
+									<label for="">Email <sup>*</sup></label>
+									<input type="email" placeholder="Es. mario.rossi@mail.it">
 								</div>
 
 								<div class="o-form__item">
 									<label for="">Titolo di studio <sup>*</sup></label>
-									<input type="text" placeholder="Es. Diploma di Geometria">
-								</div>
-
-								<div class="o-form__item">
-									<label for="">Conoscenze informatiche <sup>*</sup></label>
-									<select class="o-form__select2" style="width: 100%">
-									  {% for i in range(1, 10) %}
-											<option value="option-{{i}}">Option {{i}}</option>
-									  {% endfor %}
-									</select>
-								</div>
-
-								<div class="o-form__item">
-									<label for="">Conoscenza inglese <sup>*</sup></label>
-									<select class="o-form__select2" style="width: 100%">
-									  {% for i in range(1, 10) %}
-											<option value="option-{{i}}">Option {{i}}</option>
-									  {% endfor %}
-									</select>
-								</div>
-
-								<div class="o-form__item">
-									<label for="">Patente di guida <sup>*</sup></label>
-									<select class="o-form__select2" style="width: 100%">
-									  {% for i in range(1, 10) %}
-											<option value="option-{{i}}">Option {{i}}</option>
-									  {% endfor %}
-									</select>
+									<input type="tel" placeholder="Es. 3201234567">
 								</div>
 
 								<div class="o-form__cta">
