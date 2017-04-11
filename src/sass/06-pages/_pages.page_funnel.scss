@@ -1,5 +1,15 @@
 .page_funnel{
-
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: color(secondary);
+    height: 140px;
+    z-index: 0;
+	}
 }
 
 	.page_funnel__progressbar{
@@ -15,10 +25,22 @@
 		}
 	}
 
+	.page_funnel__required_field{
+		text-align: right;
+		margin-top: 30px;
+		padding-right: 20px;
+		span{
+			@include font-scale(x-small);
+		}	
+	}
+
 	.page_funnel__wrapper{
 		background-color: #fff;
 		@include border-radius(10px);
 		padding: 50px 0;
+		margin-bottom: 40px;
+		position: relative;
+		z-index: 1;
 		.row{
 			margin-right: auto;
 			margin-left: auto;

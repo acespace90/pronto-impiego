@@ -32,8 +32,8 @@
 			<div class="page_funnel__progressbar column">
 				{% import 'blocks/progressbar.html' as progress %}
 				{{ progress.progressbar(
+					'c-progressbar__item--success',
 					'c-progressbar__item--active',
-					'c-progressbar__item--disabled',
 					'c-progressbar__item--disabled'
 				) }}
 			</div>
@@ -48,8 +48,8 @@
 							<form action="" class="o-form">
 
 								<div class="o-form__wrapper">
-									<div class="title">La tua esperienza</div>
-									<div class="subtitle">Indicaci qual è la professione di tuo interesse e gli anni di esperienza che hai maturato in quella mansione</div>
+									<div class="title">I tuoi dati anagrafici</div>
+									<div class="subtitle">Indicandoci le informazioni sulla tua persona ci aiuterai a completare il tuo curriculum dando così informazioni utili alle aziende che sceglierai</div>
 									
 									<div class="o-form__item o-form__item--success">
 										<label for="">Professione <sup>*</sup></label>
@@ -68,12 +68,6 @@
 										  {% endfor %}
 										</select>
 									</div>
-									
-									<a href="#" class="o-form__trigger js-show-textarea">
-										Vuoi aggiungere più informazioni sulla tua esperienza? <strong>Aggiungi</strong>
-									</a>
-									<textarea id="js-textarea-more-info" class="is-hidden" rows="4" cols="50" placeholder="Inserisci maggiori informazioni sulla tua eseperienza"></textarea>
-
 								</div>
 
 								<div class="title">Istruzione e competenze</div>
@@ -142,15 +136,7 @@
 {% block javascript %}
 <script>
 	$(document).ready(function() {
-	  
-	  $('.o-form__select2').select2();
-
-	  $('.js-show-textarea').click(function(e){
-	  	e.preventDefault();
-			$('#js-textarea-more-info').removeClass('is-hidden');
-			$(this).hide();
-	  });
-
+	  $(".o-form__select2").select2();
 	});
 </script>
 {% endblock %}

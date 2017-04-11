@@ -10,7 +10,7 @@
 		margin-bottom: 8px;
 	}
 
-	input{
+	input, textarea{
 		border: 1px solid #ccc;
 		width: 100%;
 		display: block;
@@ -20,10 +20,15 @@
 		color: gray(dark);
 		transition: all .3s ease;
 		margin-bottom: 24px;
+		min-height: 40px;
 		&:focus{
 			outline: 0;
 			border: 1px solid color(primary);
 		}
+	}
+
+	textarea{
+		resize: none;
 	}
 
 	input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -41,6 +46,12 @@
 
 }
 
+	.o-form__wrapper{
+		margin-bottom: 60px;
+		border-bottom: 1px dashed #ccc;
+		padding-bottom: 30px;
+	}
+
 	.o-form__item{
 		margin-bottom: 24px;
 	}
@@ -56,3 +67,23 @@
 				color: color(error);
 			}
 		}
+
+	.o-form__cta{
+		text-align: center;
+		margin-top: 60px;
+		.button{
+			min-width: 190px;
+		}
+	}
+
+	.o-form__trigger{
+		color: color(primary);
+		@include font-scale(small);
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		display: block;
+		&:hover{
+			color: color(primary);
+			text-decoration: underline;
+		}
+	}

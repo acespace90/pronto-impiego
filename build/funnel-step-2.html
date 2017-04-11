@@ -43,7 +43,7 @@
 				
 <div class="c-progressbar ">
 	
-	<div class="c-progressbar__item c-progressbar__item--active">
+	<div class="c-progressbar__item c-progressbar__item--success">
 		<div class="icon">
 			<img src="images/svgs/list.svg" alt="" class="svg" width="40">
 		</div>
@@ -52,7 +52,7 @@
 		</div>
 	</div>
 
-	<div class="c-progressbar__item c-progressbar__item--disabled">
+	<div class="c-progressbar__item c-progressbar__item--active">
 		<div class="icon">
 			<img src="images/svgs/user.svg" alt="" class="svg" width="40">
 		</div>
@@ -85,8 +85,8 @@
 							<form action="" class="o-form">
 
 								<div class="o-form__wrapper">
-									<div class="title">La tua esperienza</div>
-									<div class="subtitle">Indicaci qual è la professione di tuo interesse e gli anni di esperienza che hai maturato in quella mansione</div>
+									<div class="title">I tuoi dati anagrafici</div>
+									<div class="subtitle">Indicandoci le informazioni sulla tua persona ci aiuterai a completare il tuo curriculum dando così informazioni utili alle aziende che sceglierai</div>
 									
 									<div class="o-form__item o-form__item--success">
 										<label for="">Professione <sup>*</sup></label>
@@ -167,12 +167,6 @@
 										  
 										</select>
 									</div>
-									
-									<a href="#" class="o-form__trigger js-show-textarea">
-										Vuoi aggiungere più informazioni sulla tua esperienza? <strong>Aggiungi</strong>
-									</a>
-									<textarea id="js-textarea-more-info" class="is-hidden" rows="4" cols="50" placeholder="Inserisci maggiori informazioni sulla tua eseperienza"></textarea>
-
 								</div>
 
 								<div class="title">Istruzione e competenze</div>
@@ -321,15 +315,7 @@
     
 <script>
 	$(document).ready(function() {
-	  
-	  $('.o-form__select2').select2();
-
-	  $('.js-show-textarea').click(function(e){
-	  	e.preventDefault();
-			$('#js-textarea-more-info').removeClass('is-hidden');
-			$(this).hide();
-	  });
-
+	  $(".o-form__select2").select2();
 	});
 </script>
 
