@@ -68,3 +68,54 @@
 				@include grid-column-offset(3);
 			}
 		}
+
+	.page_funnel__thanks{
+		text-align: center;
+	}
+
+		.page_funnel__thanks img{
+			margin-bottom: 30px;
+		}
+
+		.page_funnel__thanks__title{
+			@include font-scale(large);
+			color: color(primary);
+			font-weight: fw(bold);
+			margin-bottom: 30px;
+		}
+
+		.page_funnel__thanks p{
+			font-size: 18px;
+			line-height:  26px;
+			margin-bottom: 10px;
+		}
+
+		.page_funnel__thanks small{
+			@include font-scale(small);
+			margin-top: 80px;
+			display: block;
+			margin-bottom: 80px;
+		}
+
+		.page_funnel__thanks .thanks-message{
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			span{
+				margin-bottom: 15px;
+				color: #CFD4DA;
+				@include font-scale(mid);
+				margin-right: 20px;
+			}
+			svg{
+				// width: 190px;
+				height: 40px;
+				*{
+					fill: #CFD4DA;
+				}
+			}
+		}
+
+	.page_funnel .customer-care{
+		color: gray(base);
+	}

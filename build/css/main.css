@@ -1583,6 +1583,55 @@ img {
     width: 50%;
     margin-left: 25%; } }
 
+.page_funnel__thanks {
+  text-align: center; }
+
+.page_funnel__thanks img {
+  margin-bottom: 30px; }
+
+.page_funnel__thanks__title {
+  font-family:  "Asap", sans-serif ;
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.4em;
+  color: #39649A;
+  font-weight: 700;
+  margin-bottom: 30px; }
+
+.page_funnel__thanks p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 10px; }
+
+.page_funnel__thanks small {
+  font-family:  "Asap", sans-serif ;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857em;
+  margin-top: 80px;
+  display: block;
+  margin-bottom: 80px; }
+
+.page_funnel__thanks .thanks-message {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  .page_funnel__thanks .thanks-message span {
+    margin-bottom: 15px;
+    color: #CFD4DA;
+    font-family:  "Asap", sans-serif ;
+    font-size: 23px;
+    font-size: 1.4375rem;
+    line-height: 1.34783em;
+    margin-right: 20px; }
+  .page_funnel__thanks .thanks-message svg {
+    height: 40px; }
+    .page_funnel__thanks .thanks-message svg * {
+      fill: #CFD4DA; }
+
+.page_funnel .customer-care {
+  color: #909090; }
+
 .page_landing__professions,
 .page_landing__cities {
   background-color: #39649A; }

@@ -1,0 +1,76 @@
+{% extends "layouts/layout.html"%}
+
+{% block header %}
+<div class="row">
+	<div class="column">
+		<header class="c-header c-header--dark c-header--funnel">
+		  <div class="c-header__logo">
+		  	<a href="index.html">
+		  		<img src="images/svgs/logo.svg" alt="" class="svg">
+		  	</a>
+		  </div>
+		  <div class="c-header__companies">
+		  	Sei un' azienda e cerchi personale? <a href="#"><strong>Registrati GRATIS</strong></a>
+		  </div>
+		  <div class="c-header__companies--mobile">
+		  	<a href="#">Per le aziende</a>
+		  </div>
+		</header>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include 'blocks/footer.html' %}
+{% endblock %}
+
+{% block content %}
+	
+	<div class="page_funnel">
+
+		<div class="row">
+			<div class="page_funnel__progressbar column">
+				{% import 'blocks/progressbar.html' as progress %}
+				{{ progress.progressbar(
+					'c-progressbar__item--success',
+					'c-progressbar__item--success',
+					'c-progressbar__item--success'
+				) }}
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="column">
+				<div class="page_funnel__wrapper">
+					<div class="row">
+						<div class="page_funnel__wrapper__inner column">
+							<div class="page_funnel__thanks">
+								<img src="images/svgs/thanks-icon.svg" alt="Curriculum inviato">
+								<div class="page_funnel__thanks__title">
+									Il tuo curriculum è stato inviato!
+								</div>
+								<p>Ti confermiamo che sia la tua richiesta di invio curriculum che il tuo pagamento sono stati inviati con successo.</p>
+
+								<p>Nelle prossime 48 ore, <strong>riceverai un report riepilogativo</strong> con la lista delle aziende e a cui è stata inviata la tua candidatura.</p>
+
+								<small>Ricorda, per noi è imporate offrire un ottimo servizio sia a te che alle Aziende quindi prima di procedere con l’invio del tuo profilo, <strong>un consulente prontoimpiego.it ti contatterà</strong> per verificare telefonicamente e insieme a te i dati inseriti.</small>
+
+								<div class="thanks-message">
+									<span>Grazie per aver scelto</span>
+									<img src="images/svgs/logo.svg" alt="" class="svg">
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
