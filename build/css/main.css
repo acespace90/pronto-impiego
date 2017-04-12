@@ -1458,17 +1458,22 @@ img {
 .o-form__row {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: flex-end; }
+  .o-form__row input {
+    margin-bottom: 0; }
 
 .o-form__item {
   margin-bottom: 24px; }
   .o-form__row .o-form__item {
     width: 100%;
-    display: inline-block;
-    margin-bottom: 0; }
+    display: inline-block; }
     @media screen and (min-width: 48.0625em) {
       .o-form__row .o-form__item {
         width: 48%; } }
+  @media screen and (min-width: 48.0625em) {
+    .o-form__row--three-items .o-form__item {
+      width: 32%; } }
 
 .o-form__item--success label {
   color: #36BD77; }
@@ -1582,6 +1587,14 @@ img {
 .page_landing__cities {
   background-color: #39649A; }
 
+.c-add_companies {
+  text-align: center;
+  font-family:  "Asap", sans-serif ;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857em;
+  margin-top: 20px; }
+
 .button {
   display: inline-block;
   -webkit-appearance: none;
@@ -1619,7 +1632,16 @@ img {
       fill: #fff;
       stroke: #fff; }
   .button--small {
-    padding: 6px 20px; }
+    padding: 6px 20px;
+    font-family:  "Asap", sans-serif ;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 1.33333em; }
+    .o-form__row--three-items .button--small {
+      padding: 13px 20px;
+      width: 100%; }
+  .button--not-capitalize {
+    text-transform: none; }
   .button--primary {
     color: #fff;
     background-color: #36BD77;
@@ -1628,6 +1650,18 @@ img {
       background-color: #2b955e;
       color: #fff;
       text-decoration: none; }
+    .button--primary#js-add-button {
+      position: relative;
+      font-size: 13px; }
+      @media screen and (min-width: 48.0625em) {
+        .button--primary#js-add-button {
+          text-align: left; } }
+      .button--primary#js-add-button:after {
+        content: '+';
+        position: absolute;
+        right: 10px;
+        top: 25%;
+        font-size: 24px; }
   .button--white {
     cursor: pointer;
     color: #fff;
@@ -1966,6 +2000,36 @@ h2 {
 
 .c-progressbar__item--success svg * {
   fill: #36BD77; }
+
+.c-sendcv {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #39649A;
+  justify-content: space-between;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  flex-wrap: wrap; }
+
+.c-sendcv__info,
+.c-sendcv__price {
+  color: #fff;
+  font-family:  "Asap", sans-serif ;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.42857em; }
+
+.c-sendcv__price {
+  font-weight: 700; }
+
+.c-sendcv__delete {
+  font-weight: 700;
+  color: #0C2748; }
+  .c-sendcv__delete:hover {
+    color: #0C2748; }
 
 @media screen and (max-width: 48em) {
   .c-step {
@@ -3260,9 +3324,9 @@ button.swiper-pagination-bullet {
         transform: scale(0.5); } }
 
 .is-hidden {
-  display: none !important; }
+  display: none; }
 
 .is-visible {
-  display: block !important; }
+  display: block; }
 
 /*# sourceMappingURL=main.css.map */

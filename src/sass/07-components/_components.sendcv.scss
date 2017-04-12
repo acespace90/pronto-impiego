@@ -1,0 +1,28 @@
+.c-sendcv{
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	background-color: color(primary);
+	justify-content: space-between;
+	@include border-radius(3px);
+	margin-bottom: 10px;
+	flex-wrap: wrap;
+}
+
+	.c-sendcv__info,
+	.c-sendcv__price{
+		color: #fff;
+		@include font-scale(small);
+	}
+
+	.c-sendcv__price{
+		font-weight: fw(bold);
+	}
+
+	.c-sendcv__delete{
+		font-weight: fw(bold);
+		color: color(secondary);
+		&:hover{
+			color: color(secondary);
+		}
+	}

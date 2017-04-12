@@ -117,7 +117,8 @@ gulp.task('footerjs', function() {
     bwpath + 'swiper/dist/js/swiper.jquery.min.js',
     bwpath + 'inline-svg/dist/inlineSVG.min.js',
     bwpath + 'select2/dist/js/select2.min.js',
-    'src/js/inline-svg.js'
+    'src/js/inline-svg.js',
+    'src/js/addCompanies.js'
   ])
   .pipe(sourcemaps.init({loadMaps: true}))
   .pipe(concat('footer.min.js'))
@@ -137,7 +138,7 @@ gulp.task('blockjs', function() {
 gulp.task('watch', function () {
   gulp.watch('src/views/**/**/*.+(html|nunjucks)', ['nunjucks']);
   gulp.watch('src/sass/**/**/*.scss', ['sass']);
-  gulp.watch('src/js/blocks/**/*.js', ['scripts']);
+  gulp.watch('src/js/**/*.js', ['scripts']);
   gulp.watch('src/js/vendor/**/*.js', ['scripts']);
   gulp.watch('build/**/*.html', browserSync.reload);
 

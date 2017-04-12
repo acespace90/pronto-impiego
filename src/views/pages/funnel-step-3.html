@@ -1,0 +1,162 @@
+{% extends "layouts/layout.html"%}
+
+{% block header %}
+<div class="row">
+	<div class="column">
+		<header class="c-header c-header--dark c-header--funnel">
+		  <div class="c-header__logo">
+		  	<a href="index.html">
+		  		<img src="images/svgs/logo.svg" alt="" class="svg">
+		  	</a>
+		  </div>
+		  <div class="c-header__companies">
+		  	Sei un' azienda e cerchi personale? <a href="#"><strong>Registrati GRATIS</strong></a>
+		  </div>
+		  <div class="c-header__companies--mobile">
+		  	<a href="#">Per le aziende</a>
+		  </div>
+		</header>
+	</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	{% include 'blocks/footer.html' %}
+{% endblock %}
+
+{% block content %}
+	
+	<div class="page_funnel">
+
+		<div class="row">
+			<div class="page_funnel__progressbar column">
+				{% import 'blocks/progressbar.html' as progress %}
+				{{ progress.progressbar(
+					'c-progressbar__item--success',
+					'c-progressbar__item--success',
+					'c-progressbar__item--active'
+				) }}
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="column">
+				<div class="page_funnel__wrapper">
+					<div class="row">
+						<div class="page_funnel__wrapper__inner column">
+							
+							<form action="" class="o-form">
+
+								<div class="o-form__wrapper">
+									<div class="title">Il tuo prossimo lavoro</div>
+									<div class="subtitle">Indicaci le tue preferenze per il tuo prossimo lavoro.</div>
+									
+									<div class="o-form__item">
+										<label for="">Contratto richiesto <sup>*</sup></label>
+										<select class="o-form__select2" style="width: 100%">
+										  {% for i in range(1, 5) %}
+												<option value="option-{{i}}">Option {{i}}</option>
+										  {% endfor %}
+										</select>
+									</div>
+
+									<div class="o-form__row o-form__row--three-items">
+										<div class="o-form__item">
+											<label for="">Disponibile a turni <sup>*</sup></label>
+											<select class="o-form__select2" style="width: 100%">
+												<option value="">Si</option>
+												<option value="">No</option>
+											</select>
+										</div>
+										<div class="o-form__item">
+											<label for="">Disponibile a trasferte <sup>*</sup></label>
+											<select class="o-form__select2" style="width: 100%">
+												<option value="">Si</option>
+												<option value="">No</option>
+											</select>
+										</div>
+										<div class="o-form__item">
+											<label for="">Disponibile a straordinari <sup>*</sup></label>
+											<select class="o-form__select2" style="width: 100%">
+												<option value="">Si</option>
+												<option value="">No</option>
+											</select>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="title">Le aziende da contattare</div>
+								<div class="subtitle">Indicaci la provincia e il settore per il quale vuoi che venga inviato il tuo curriculum.</div>
+
+								{% include 'blocks/sendcv.html' %}
+								{% include 'blocks/sendcv.html' %}
+
+								<div class="c-add_companies">
+									<a href="#" class="js-add-more-companies">+ Aggiungi altre aziende</a>
+								</div>
+	
+								<div class="o-form__row o-form__row--three-items is-hidden" id="js-form-other-companies">
+									<div class="o-form__item">
+										<label for="">Settore <sup>*</sup></label>
+										<select id="js-sector-select" class="o-form__select2" style="width: 100%">
+											<option value=""></option>
+											{% for i in range(1, 10) %}
+												<option value="option-{{i}}">Option {{i}}</option>
+										  {% endfor %}
+										</select>
+									</div>
+									<div class="o-form__item">
+										<label for="">Provincia <sup>*</sup></label>
+										<select id="js-area-select" class="o-form__select2" style="width: 100%">
+											<option value=""></option>
+											{% for i in range(1, 10) %}
+												<option value="option-{{i}}">Option {{i}}</option>
+										  {% endfor %}
+										</select>
+									</div>
+									<div class="o-form__item">
+										<a href="#" id="js-add-button" class="button button--primary button--small button--not-capitalize is-hidden"><strong>Trovate 532 strutture</strong></a>
+									</div>
+								</div>
+
+								<div class="o-form__cta">
+									<button class="button button--primary o-bottom-spacing">
+										<strong>Paga e invia | 50,00€</strong>
+									</button>
+									<div>
+										<img src="images/credit-cards.jpg" alt="Carte di credito accettate">
+									</div>
+								</div>
+
+							</form>
+
+						</div>						
+					</div>
+					<div class="page_funnel__required_field">
+						<span><sup>*</sup>campo obbligatorio</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+{% endblock %}
+
+{% block javascript %}
+<script>
+	$(document).ready(function() {
+	  $(".o-form__select2").select2();
+
+	  $("#js-sector-select, #js-area-select").select2({
+		  placeholder: "Seleziona...",
+		});
+
+	  $('#js-sector-select').on('select2:select', function (evt) {
+		  $('#js-add-button').removeClass('is-hidden');
+		});
+	  
+	});
+</script>
+{% endblock %}

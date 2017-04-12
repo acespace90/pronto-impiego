@@ -56,6 +56,10 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+		align-items: flex-end;
+		input{
+			margin-bottom: 0;
+		}
 	}
 
 	.o-form__item{
@@ -63,9 +67,13 @@
 		.o-form__row &{
 			width: 100%;
 			display: inline-block;
-			margin-bottom: 0;
 			@include breakpoint(large up) {
 				width: 48%;
+			}
+		}
+		.o-form__row--three-items &{
+			@include breakpoint(large up) {
+				width: 32%;
 			}
 		}
 	}

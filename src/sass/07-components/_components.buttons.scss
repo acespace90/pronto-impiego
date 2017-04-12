@@ -32,11 +32,34 @@
   // Sizes
   &--small{
     @include gnv-button-size(small);
+    @include font-scale(x-small);
+    .o-form__row--three-items &{
+      padding: 13px 20px;
+      width: 100%;
+    }
+  }
+
+  &--not-capitalize{
+    text-transform: none;
   }
 
   // Colors
   &--primary{
     @include gnv-button-color( #fff, color(success) );
+    &#js-add-button{
+      position: relative;
+      font-size: 13px;
+      @include breakpoint(large up) {
+        text-align: left;
+      }
+      &:after{
+        content: '+';
+        position: absolute;
+        right: 10px;
+        top: 25%;
+        font-size: 24px;
+      }
+    }
   }
 
   &--white{
